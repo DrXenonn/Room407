@@ -60,7 +60,7 @@ public class RoomTransition : MonoBehaviour
 
     private IEnumerator PlayAudioDelayed()
     {
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(3.7f);
         Radio.Play();
     }
 

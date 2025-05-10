@@ -68,6 +68,7 @@ public class Door : MonoBehaviour, IInteractable
     private IEnumerator OpenCloseAnimation()
     {
         _isMoving = true;
+        
 
         var startRot = transform.localRotation;
         var endRot = IsClosed ? _openRotation : _closedRotation;
@@ -76,6 +77,11 @@ public class Door : MonoBehaviour, IInteractable
         
         AudioSource.PlayOneShot(clip);
 
+        if (IsClosed)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        
         while (elapsed < RotationDuration)
         {
             transform.localRotation = Quaternion.Slerp(startRot, endRot, elapsed / RotationDuration);
