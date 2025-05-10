@@ -7,6 +7,9 @@ public class Door : MonoBehaviour, IInteractable
     public bool IsLocked;
     [SerializeField] private GameEvent Info;
     [SerializeField] private GameEvent OnFirstTry;
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip OpenAudioClip;
+    [SerializeField] private AudioClip CloseAudioClip;
     [SerializeField] private bool IsClosed = true;
     [SerializeField] private float RotationDuration;
     [SerializeField] private float OpenAngle;
@@ -23,33 +26,43 @@ public class Door : MonoBehaviour, IInteractable
     {
         _firstTry = true;
         _closedRotation = transform.localRotation;
-        _openRotation = _closedRotation * Quaternion.Euler(0, 0, OpenAngle);
+        _openRotation = _closedRotation * Quaternion.Euler(0, 0, -OpenAngle);
+
+        if (!IsClosed)
+        {
+            transform.localRotation = _openRotation;
+        }
     }
 
     public void OnInteract()
     {
         if (_isMoving) return;
-        
+
         if (IsLocked)
         {
             var doorData = new Tuple<string, float>("It's locked...", 2);
             Info.Raise(doorData);
-            
+
             if (_firstTry)
             {
                 OnFirstTry.Raise();
                 _firstTry = false;
             }
-            
+
             return;
         }
 
-        StartCoroutine(OpenCloseAnimation());
+        OpenCloseDoor();
     }
 
     public string GetHoverText()
     {
         return InteractionText;
+    }
+
+    public void OpenCloseDoor()
+    {
+        StartCoroutine(OpenCloseAnimation());
     }
 
     private IEnumerator OpenCloseAnimation()
@@ -58,7 +71,10 @@ public class Door : MonoBehaviour, IInteractable
 
         var startRot = transform.localRotation;
         var endRot = IsClosed ? _openRotation : _closedRotation;
+        var clip = IsClosed ? OpenAudioClip : CloseAudioClip;
         var elapsed = 0f;
+        
+        AudioSource.PlayOneShot(clip);
 
         while (elapsed < RotationDuration)
         {
