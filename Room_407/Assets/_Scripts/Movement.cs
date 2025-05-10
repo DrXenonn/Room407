@@ -17,8 +17,6 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         IsMoving = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         _lastPosition = transform.position;
     }
 

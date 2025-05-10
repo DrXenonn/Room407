@@ -97,7 +97,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_fontColor.a
-    path: Canvas/Text (TMP)
+    path: Canvas/00:00
     classID: 114
     script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
     flags: 0
@@ -163,7 +163,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Canvas/Text (TMP)
+    path: Canvas/00:0_
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -229,7 +229,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Canvas/Text (TMP) (1)
+    path: Canvas/00:00
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -242,7 +242,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2341462809
+      path: 1471651653
       attribute: 4185109675
       script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
       typeID: 114
@@ -251,7 +251,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2341462809
+      path: 2327503756
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -260,7 +260,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1929597028
+      path: 1471651653
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -370,7 +370,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_fontColor.a
-    path: Canvas/Text (TMP)
+    path: Canvas/00:00
     classID: 114
     script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
     flags: 0
@@ -436,7 +436,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Canvas/Text (TMP)
+    path: Canvas/00:0_
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -502,7 +502,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Canvas/Text (TMP) (1)
+    path: Canvas/00:00
     classID: 1
     script: {fileID: 0}
     flags: 0

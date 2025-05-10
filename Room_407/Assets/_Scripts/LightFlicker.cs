@@ -27,4 +27,11 @@ public class LightFlicker : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(FlickerSpeed / 2f, FlickerSpeed * 2f));
         }
     }
+
+    public void ChangeFlickerSettings(float minIntensity, float maxIntensity, float flickerSpeed)
+    {
+        MinIntensity = minIntensity;
+        MaxIntensity = maxIntensity;
+        FlickerSpeed = flickerSpeed;
+    }
 }
