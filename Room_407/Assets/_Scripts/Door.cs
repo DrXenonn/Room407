@@ -75,7 +75,10 @@ public class Door : MonoBehaviour, IInteractable
         var clip = IsClosed ? OpenAudioClip : CloseAudioClip;
         var elapsed = 0f;
         
-        AudioSource.PlayOneShot(clip);
+        if (AudioSource)
+        {
+            AudioSource.PlayOneShot(clip);
+        }
 
         if (IsClosed)
         {
