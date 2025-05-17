@@ -1,10 +1,12 @@
+using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager Instance;
     [SerializeField] private int TargetFrameRate;
+    [SerializeField] private Movement Movement;
+    [SerializeField] private CinemachineInputAxisController CamMovement;
 
     private void Awake()
     {
@@ -16,6 +18,12 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void TakeControl(bool state)
+    {
+        CamMovement.enabled = state;
+        Movement.enabled = state;
     }
 
     private void Start()

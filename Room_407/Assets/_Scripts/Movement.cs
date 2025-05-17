@@ -60,13 +60,15 @@ public class Movement : MonoBehaviour
 
     private Vector3 GetMovementDirection()
     {
-        var camForward = Cam.forward;
-        var camForwardX = camForward.x;
-        var camForwardZ = camForward.z;
+        var forward = Cam.forward;
+        var right = Cam.right;
 
-        var forward = new Vector3(camForwardX, 0, camForwardZ).normalized;
-        var right = new Vector3(camForwardZ, 0, -camForwardX).normalized;
+        forward.y = 0;
+        right.y = 0;
 
-        return forward * _movementVector.z + right * _movementVector.x;
+        forward.Normalize();
+        right.Normalize();
+
+        return (forward * _movementVector.z + right * _movementVector.x).normalized;
     }
 }

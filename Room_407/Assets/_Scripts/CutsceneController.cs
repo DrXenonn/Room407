@@ -8,7 +8,6 @@ public class CutsceneController : MonoBehaviour
     [SerializeField] private PlayableDirector Director;
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject CutsceneCamera;
-    [SerializeField] private RoomTransition Transition;
     private bool _isWaitingForInput = false;
 
     private void Update()
