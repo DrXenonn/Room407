@@ -9,13 +9,13 @@ A short psychological horror prototype set in an asylum room, playable right in 
 </p>
 
 <p align="center">
-  <img src="docs/2QWsfK.png" width="600">
+  <img src="docs/qruse6.png" width="600">
 </p>
 
 <p align="center">
   <img src="docs/UcCjfe.png" width="270">
   <img src="docs/obfIWK.png" width="270">
-  <img src="docs/qruse6.png" width="270">
+  <img src="docs/2QWsfK.png" width="270">
 </p>
 
 ## About
