@@ -14,8 +14,8 @@ A short psychological horror prototype set in an asylum room, playable right in 
 
 <p align="center">
   <img src="docs/UcCjfe.png" width="270">
-  <img src="obfIWK.png" width="270">
-  <img src="qruse6.png" width="270">
+  <img src="docs/obfIWK.png" width="270">
+  <img src="docs/qruse6.png" width="270">
 </p>
 
 ## About
